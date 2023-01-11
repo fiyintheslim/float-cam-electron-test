@@ -29,9 +29,11 @@ export const StatStyle = styled.p<{ stat: number }>`
     display: block;
     width: 20rem;
     height: 0.5rem;
-    background: gray;
+    background: #c5b9b9;
     position: relative;
     border: solid 0.1rem #91a4b9;
+    border-radius: 5rem;
+    overflow: hidden;
 
     &:before {
       content: "";
