@@ -1,5 +1,5 @@
 const path = require("path");
-const { app, BrowserWindow, ipcMain } = require("electron");
+const { app, BrowserWindow } = require("electron");
 const isDev = require("electron-is-dev");
 
 function createWindow() {
@@ -10,7 +10,7 @@ function createWindow() {
       contextIsolation: true,
     },
   });
-  //windw.webContents.openDevTools();
+
 
   windw.loadURL(
     isDev

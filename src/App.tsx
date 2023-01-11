@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import './App.css'
-import { Home } from './pages/Home'
+import { Home } from './pages/Home/Home'
 import { Pokemon } from './pages/Pokemon/Pokemon'
 
 
