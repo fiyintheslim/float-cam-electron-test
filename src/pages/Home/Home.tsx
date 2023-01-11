@@ -31,7 +31,7 @@ export const Home = () => {
 
     return (
         <ContainerStyle>
-            <Dropdown menu={{ items }}>
+            <Dropdown menu={{ items }} placement="bottom">
                 <h2>Hover here to view Pokemons</h2>
             </Dropdown>
             <ButtonsContainerStyle>
