@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom"
-import { isError, useQuery } from "@tanstack/react-query"
+import { useQuery } from "@tanstack/react-query"
 import { fetchAllPokemon } from '../../network/fetchPokemon'
 import { Spin, Button, Dropdown } from "antd"
-import { ButtonsContainerStyle } from "./home.styles"
+import { ButtonsContainerStyle, ContainerStyle } from "./home.styles"
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage'
 
 
@@ -30,16 +30,16 @@ export const Home = () => {
     }
 
     return (
-        <div>
+        <ContainerStyle>
             <Dropdown menu={{ items }}>
-                <h2>Hover to view Pokemons</h2>
+                <h2>Hover here to view Pokemons</h2>
             </Dropdown>
             <ButtonsContainerStyle>
                 <Button disabled={!(!!data?.previous)} onClick={() => page > 0 ? setPage(page - 1) : null}>{"< Previous page"}</Button>
                 <input type="number" value={page} onChange={handleInputChange} />
                 <Button disabled={!(!!data?.next)} onClick={() => setPage(page + 1)}>{"Next page >"}</Button>
             </ButtonsContainerStyle>
-        </div>
+        </ContainerStyle>
     )
 }
 
