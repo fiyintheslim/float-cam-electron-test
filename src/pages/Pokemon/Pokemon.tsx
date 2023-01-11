@@ -31,7 +31,7 @@ export const Pokemon = () => {
             </ItemStyle>
             <ItemStyle>
                 <span className="title">Weight</span>
-                <span>{data && (data.weight * 10)}kg</span>
+                <span>{data && (data.weight * 0.1)}kg</span>
             </ItemStyle>
 
             <ItemStyle>
