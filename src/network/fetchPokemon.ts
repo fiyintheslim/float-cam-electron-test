@@ -16,7 +16,5 @@ export async function fetchPokemon(pokemon?: string) {
     `/pokemon/${pokemon}`
   );
 
-  console.log(response);
-
   return response.data;
 }
