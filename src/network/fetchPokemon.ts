@@ -5,7 +5,7 @@ import { PokemonList, Pokemon } from "./types";
 export async function fetchAllPokemon(page: number) {
   let offset = 20;
   const response: AxiosResponse<PokemonList> = await baseURL.get(
-    `/pokemon?offset=${20 * page}&limit${20}`
+    `/pokemon?offset=${offset * page}&limit${offset}`
   );
 
   return response.data;

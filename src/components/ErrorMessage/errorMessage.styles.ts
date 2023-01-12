@@ -14,4 +14,13 @@ export const MessageStyle = styled.div`
   p {
     font-size: 1.4rem;
   }
+
+  button {
+    background: none;
+    cursor: pointer;
+  }
+
+  button svg {
+    color: black;
+  }
 `;

@@ -10,13 +10,13 @@ import { ArrowLeftOutlined } from '@ant-design/icons'
 export const Pokemon = () => {
     const navigate = useNavigate();
     const { pokemon } = useParams();
-    const { data, isLoading, isError } = useQuery(["pokemon", pokemon], () => fetchPokemon(pokemon))
-    console.log(data?.stats[0].base_stat)
+    const { data, isLoading, isError, refetch } = useQuery(["pokemon", pokemon], () => fetchPokemon(pokemon))
+
     if (isLoading) {
         return <Spin size="large" />
     }
     if (isError) {
-        return <ErrorMessage msg={`Couldn't fetch more info on ${pokemon}`} />
+        return <ErrorMessage msg={`Couldn't fetch more info on ${pokemon}`} refetch={refetch} />
     }
     return (
         <div>
