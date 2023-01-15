@@ -18,6 +18,9 @@ export const Pokemon = () => {
     if (isError) {
         return <ErrorMessage msg={`Couldn't fetch more info on ${pokemon}`} refetch={refetch} />
     }
+    if (data) {
+        window.pokemon.sendPokemon(JSON.stringify(data))
+    }
     return (
         <div>
 
